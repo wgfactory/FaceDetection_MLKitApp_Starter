@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_alignParentBottom="true">
+
+        <!-- ImageView - 카메라 스위치 버튼 코드 넣기 -->
+
+        <!-- Button - 얼굴 검출 버튼 코드 넣기 -->
+출
+    </LinearLayout>
+
+    <!-- CameraView 코드 넣기 -->
+
+    <com.wgf.faceapp.Helper.GraphicOverlay
+        android:id="@+id/grapic_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_layout"/>
+
+</RelativeLayout>
