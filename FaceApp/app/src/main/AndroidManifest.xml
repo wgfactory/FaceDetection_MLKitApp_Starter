@@ -11,9 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
-            <meta-data
-                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-                android:value="face" />
+            <!-- TODO - Firebase 설정 추가하기 -->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -45,33 +45,8 @@ class MainActivity : AppCompatActivity() {
         // TODO - 얼굴 감지! 버튼 클릭했을 때 코드 넣기
 
 
-        // 카메라 뷰에 대한 코드
-        camera_view.addCameraKitListener(object:CameraKitEventListener{
-            override fun onVideo(p0: CameraKitVideo?) {
-                Log.d(TAG, ">> onVideo")
-            }
+        // TODO - 카메라 뷰에 대한 코드
 
-            override fun onEvent(p0: CameraKitEvent?) {
-                //TODO - onEvent() 함수 로그 출력
-            }
-
-            override fun onImage(p0: CameraKitImage?) {
-                //TODO - onImage() 함수 로그 출력
-
-                waitingDialog.show()
-                var bitmap = p0!!.bitmap
-                bitmap = Bitmap.createScaledBitmap(bitmap, camera_view.width, camera_view.height, false)
-
-                camera_view.stop()
-
-                runFaceDetector(bitmap)
-            }
-
-            override fun onError(p0: CameraKitError?) {
-                //TODO - onError() 함수 로그 출력
-
-            }
-        })
     }
 
     private fun runFaceDetector(bitmap: Bitmap?) {
@@ -80,14 +55,8 @@ class MainActivity : AppCompatActivity() {
         var image = FirebaseVisionImage.fromBitmap(bitmap!!)
 
         // TODO - FireBase에서 얼굴 검출을 하기 위한 설정들!!
-        var options = // TODO - 코드 넣기
 
-        var detector = // TODO - 코드 넣기
-
-        // 얼굴 검출이 되면 호출될 함수 설정하는 코드!
-        detector.detectInImage(image)
-            .addOnSuccessListener { result -> processFaceResult(result, DRAW_FACE_CONTOUR) }
-            .addOnFailureListener {e -> Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()}
+        // TODO - 얼굴 검출이 되면 호출될 함수 설정하는 코드!
 
     }
 
@@ -112,20 +81,11 @@ class MainActivity : AppCompatActivity() {
         for(i in 0 until faceResult.size) {
             var face = faceResult.get(i)
 
-            // 얼굴 찾으면 사각형 박스 그려주기
-            if(drawType == DRAW_FACE_BOX) {
-                val bounds = face.boundingBox
-                val rectOverlay = // TODO - 코드 넣기
-                // TODO - 코드 넣기
+            // TODO - 1) 얼굴 찾으면 사각형 박스 그려주기
 
-            }
 
-            // 얼굴 찾으면 사각형 박스 + 얼굴 윤곽석 + 랜드마크 그려주기
-            if(drawType == DRAW_FACE_CONTOUR) {
-                var faceGraphic = // TODO - 코드 넣기
-                grapic_overlay.add(faceGraphic)
+            // TODO - 2) 얼굴 찾으면 사각형 박스 + 얼굴 윤곽석 + 랜드마크 그려주기
 
-            }
             count++
         }
 
@@ -139,25 +99,9 @@ class MainActivity : AppCompatActivity() {
         // TODO - Toast 메세지 만드는 코드 넣기
     }
 
-    override fun onResume() {
-        super.onResume()
+    //TODO - onResume() 함수 구현 + 카메라 start 하는 코드 넣기
 
-        //TODO - onResume() 함수 로그 출력
+    //TODO - onPause() 함수 구현 + 카메라 stop 하는 코드 넣기
 
-        // TODO - 카메라 start 하는 넣기
-    }
-
-    override fun onPause() {
-        super.onPause()
-
-        //TODO onPause() 함수 로그 출력
-
-        // TODO - 카메라 stop 하는 넣기
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        //TODO - onDestroy()함수 로그 출력
-    }
+    //TODO - onDestroy()함수 구현
 }
