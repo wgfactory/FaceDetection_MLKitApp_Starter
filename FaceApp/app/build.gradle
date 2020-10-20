@@ -35,16 +35,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //Firebase MLKit
-    implementation 'com.google.firebase:firebase-core:17.0.0'
-    implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
-    implementation 'com.google.firebase:firebase-ml-vision-face-model:20.0.1'
-
-    //Camera
-    implementation 'com.wonderkiln:camerakit:0.13.1'
-
-    //dialog
-    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+    //TODO - Firebase MLKit 패키지 추가하기
 
 
+    //TODO - Camera 패키지 추가하기
+
+
+    //TODO - dialog 패키지 추가하기
 }
