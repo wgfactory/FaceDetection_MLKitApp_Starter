@@ -30,16 +30,19 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+        implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //TODO - Firebase MLKit 패키지 추가하기
-
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
+    implementation 'com.google.firebase:firebase-ml-vision-face-model:20.0.1'
 
     //TODO - Camera 패키지 추가하기
-
+    implementation 'com.wonderkiln:camerakit:0.13.1'
 
     //TODO - dialog 패키지 추가하기
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
 }
